@@ -1,0 +1,27 @@
+services:
+  nginx:
+    url: http://opa-bundle-server/opa-bundle
+    credentials:
+      bearer:
+        token: b3BhLXVzZXI6Tk9fU0VDUkVU
+        scheme: Basic
+
+bundles:
+  authz:
+    service: nginx
+    resource: /dsr-fachdienst-policy-bundle.tar.gz
+    signing:
+      keyid: bundle_sign_puk
+
+# Optional - Print decisions in the Docker logs. Configure a remote service for production use cases.
+decision_logs:
+  console: true
+
+keys:
+  bundle_sign_puk:
+    algorithm: ES256
+    key: |
+      -----BEGIN PUBLIC KEY-----
+      MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEiKmRx+3W+9P3ltD0xMDirf1xu/l9
+      mv64UxDbCbLZVxQ/63XYHoEKn9/abb/V/C3GroNGPyTSzOvvXq0vz75t3w==
+      -----END PUBLIC KEY-----

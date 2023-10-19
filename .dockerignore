@@ -1,0 +1,6 @@
+*
+!src/bundle
+!sign
+
+!nginx/nginx.conf
+!nginx/.htpasswd

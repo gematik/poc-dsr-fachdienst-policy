@@ -1,0 +1,14 @@
+{
+  "allowedBuildModel": [
+    "Pixel 4a",
+    "Pixel 6"
+  ],
+  "allowedApplications": [
+    {
+      "packageName": "de.gematik.dsr.android",
+      "version": 1,
+      "certificateSha256Digest": "Br8MmBmVeijVKv77d2_UxosqaKD0F2IyTJ-Ak04IhBI"
+    }
+  ],
+  "minimumSecurityPatchLevel": "2022-12-01"
+}
