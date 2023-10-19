@@ -1,0 +1,18 @@
+{
+  "blocklistClientIPs": [
+    "217.110.27.114",
+    "217.110.27.115"
+  ],
+  "allowedCountryCodes": [
+    "DE",
+    "AT",
+    "CH",
+    "SE"
+  ],
+  "blocklistUserIdentifier": [
+    "X000000000",
+    "X123456789",
+    "X987654321",
+    "X999999999"
+  ]
+}

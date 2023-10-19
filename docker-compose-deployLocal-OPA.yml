@@ -1,0 +1,27 @@
+version: '3.8'
+
+# Common Environment Timezone Entry
+x-environment-timezone: &environment-timezone-ref
+  TZ: Europe/Berlin
+
+services:
+  opa:
+    container_name: opa
+    image: openpolicyagent/opa:0.56.0
+    restart: unless-stopped
+    command: [ "run", "--server", "--bundle", "--log-format", "text", "--config-file", "/opa-config.yaml" ]
+    environment:
+      <<: *environment-timezone-ref
+    volumes:
+      - ./opa/opa-config.yaml:/opa-config.yaml
+    ports:
+      - '8181:8181' # Optional: Map OPA's API port to a host port if needed
+
+  opa-bundle-server:
+    container_name: opa-bundle-server
+    image: dsr/opa-bundle-server:latest
+    restart: unless-stopped
+    environment:
+      <<: *environment-timezone-ref
+    ports:
+      - '8787:80'   # Optional: Map NGINX HTTP port to a host port if needed
