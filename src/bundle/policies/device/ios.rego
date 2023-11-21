@@ -48,11 +48,11 @@ violations[v] {
 }
 
 # METADATA
-# description: A rule that determines if 'systemVersion' is allowed.
+# description: A rule that determines if 'systemVersion' is allowed - check via REGEX
 system_version_predicate if {
 	is_ios_device
 	system_version := trim_space(input.deviceTokenPayload.deviceHealth.deviceAttributes.systemVersion)
-	system_version in ios_data.allowedSystemVersions
+	regex.match(`^(17|16)(\.[0-9]+)*$`, system_version)
 }
 
 # Generate violation if device systemModel attribut not match

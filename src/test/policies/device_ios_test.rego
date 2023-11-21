@@ -27,11 +27,6 @@ ios_test_data := {
 		"iPhone15,3",
 		"iPhone16,1"
 	],
-	"allowedSystemVersions": [
-		"16.6",
-		"16.5.1",
-		"17.0.2"
-	],
 	"allowedRpIDs": ["8/FR27wyIIXITNLSkepN9neNcVG+gAKVL0k89/FEGlY"]
 }
 

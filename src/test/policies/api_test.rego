@@ -22,10 +22,6 @@ import future.keywords.if
 
 ios_test_data := {
 	"allowedSystemModels": ["iPhone13,3", "iPhone13,2"],
-	"allowedSystemVersions": [
-		"16.6",
-		"16.5.1"
-	],
 	"allowedRpIDs": ["8/FR27wyIIXITNLSkepN9neNcVG+gAKVL0k89/FEGlY"]
 }
 
